@@ -1,0 +1,282 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+    background-color: #ff3f6c;
+    color: rgb(7, 5, 5);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.top-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-nav .search-bar {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+}
+
+.top-nav .search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.top-nav .search-bar button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #fff;
+    color: #ff3f6c;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.top-nav .account-cart a {
+    margin-left: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Categories nav */
+.categories-nav {
+    background-color: #e03661;
+}
+
+.categories-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 10px 20px;
+    gap: 15px;
+}
+
+.categories-nav ul li a {
+    color: rgb(10, 7, 7);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Products Section */
+.products, .deals {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.products h2, .deals h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #ff3f6c;
+    color: rgb(12, 7, 7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #e03661;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-nav .search-bar {
+        width: 100%;
+        margin: 0;
+    }
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .categories-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Sign In button */
+    .signin-btn {
+        display: inline-block;
+        margin: 50px;
+        padding: 15px 30px;
+        background-color: #ff3f6c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .signin-btn:hover {
+        background-color: #e03661;
+    }
+
+    /* Modal overlay */
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal:target {
+        display: flex;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        width: 320px;
+        text-align: center;
+        position: relative;
+    }
+
+    .modal-content h2 {
+        margin-bottom: 20px;
+    }
+
+    .modal-content input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .modal-content button {
+        width: 95%;
+        padding: 10px;
+        background-color: #ff3f6c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .modal-content button:hover {
+        background-color: #e03661;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .close-btn:hover {
+        color: #ff3f6c;
+    }
+
+    /* Checkbox hack for toggle */
+    #toggle-signup {
+        display: none;
+    }
+
+    .toggle-label {
+        display: block;
+        margin: 10px 0;
+        color: #ff3f6c;
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 0.9rem;
+    }
+
+    /* Hide register by default */
+    .register-form {
+        display: none;
+    }
+
+    /* Show register when checkbox checked */
+    #toggle-signup:checked ~ .register-form {
+        display: block;
+    }
+
+    /* Hide login when checkbox checked */
+    #toggle-signup:checked ~ .login-form {
+        display: none;
+    }
