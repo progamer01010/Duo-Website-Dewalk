@@ -1,4 +1,6 @@
-/* Reset */
+/* =======================
+   RESET
+======================= */
 * {
     margin: 0;
     padding: 0;
@@ -10,38 +12,42 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Header */
+/* =======================
+   HEADER
+======================= */
 header {
     background-color: #ff3f6c;
-    color: rgb(7, 5, 5);
 }
 
+/* Top Navigation */
 .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
 }
 
-.top-nav .logo {
+.logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: #000;
 }
 
-.top-nav .search-bar {
+/* Search Bar */
+.search-bar {
     flex: 1;
     margin: 0 20px;
     display: flex;
 }
 
-.top-nav .search-bar input {
+.search-bar input {
     flex: 1;
     padding: 8px;
     border: none;
     border-radius: 4px 0 0 4px;
 }
 
-.top-nav .search-bar button {
+.search-bar button {
     padding: 8px 15px;
     border: none;
     background-color: #fff;
@@ -51,14 +57,31 @@ header {
     cursor: pointer;
 }
 
-.top-nav .account-cart a {
-    margin-left: 15px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
+/* =======================
+   ACCOUNT + CART (FIXED)
+======================= */
+.account-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
 }
 
-/* Categories nav */
+.account-cart a {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.account-cart a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   CATEGORIES NAV
+======================= */
 .categories-nav {
     background-color: #e03661;
 }
@@ -67,43 +90,48 @@ header {
     display: flex;
     list-style: none;
     padding: 10px 20px;
-    gap: 15px;
+    gap: 20px;
 }
 
 .categories-nav ul li a {
-    color: rgb(10, 7, 7);
-    text-decoration: none;
+    color: #000;
     font-weight: bold;
+    text-decoration: none;
 }
 
-/* Banner */
+/* =======================
+   BANNER
+======================= */
 .banner img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Products Section */
-.products, .deals {
-    padding: 50px 20px;
+/* =======================
+   PRODUCTS / DEALS
+======================= */
+.products,
+.deals {
+    padding: 40px 20px;
     text-align: center;
-    
 }
 
-.products h2, .deals h2 {
+.products h2,
+.deals h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .product-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .product-card {
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     width: 220px;
@@ -118,23 +146,24 @@ header {
 .product-card img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .product-card h3 {
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .product-card p {
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .product-card button {
-    padding: 10px 20px;
+    padding: 10px;
+    width: 100%;
     background-color: #ff3f6c;
-    color: rgb(12, 7, 7);
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -144,153 +173,12 @@ header {
     background-color: #e03661;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .top-nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .top-nav .search-bar {
-        width: 100%;
-        margin: 0;
-    }
-    .product-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .categories-nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-/* Sign In button */
-    .signin-btn {
-        display: inline-block;
-        margin: 50px;
-        padding: 15px 30px;
-        background-color: #ff3f6c;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-    }
-
-    .signin-btn:hover {
-        background-color: #e03661;
-    }
-
-    /* Modal overlay */
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.7);
-        display: none;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modal:target {
-        display: flex;
-    }
-
-    .modal-content {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        width: 320px;
-        text-align: center;
-        position: relative;
-    }
-
-    .modal-content h2 {
-        margin-bottom: 20px;
-    }
-
-    .modal-content input {
-        width: 90%;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-
-    .modal-content button {
-        width: 95%;
-        padding: 10px;
-        background-color: #ff3f6c;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .modal-content button:hover {
-        background-color: #e03661;
-    }
-
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        text-decoration: none;
-        font-size: 20px;
-        color: #333;
-    }
-
-    .close-btn:hover {
-        color: #ff3f6c;
-    }
-
-    /* Checkbox hack for toggle */
-    #toggle-signup {
-        display: none;
-    }
-
-    .toggle-label {
-        display: block;
-        margin: 10px 0;
-        color: #ff3f6c;
-        cursor: pointer;
-        text-decoration: underline;
-        font-size: 0.9rem;
-    }
-
-    /* Hide register by default */
-    .register-form {
-        display: none;
-    }
-
-    /* Show register when checkbox checked */
-    #toggle-signup:checked ~ .register-form {
-        display: block;
-    }
-
-    /* Hide login when checkbox checked */
-    #toggle-signup:checked ~ .login-form {
-        display: none;
-    }
-/* =========================
-   CART MODAL STYLING
-========================= */
-
-#cart-modal {
+/* =======================
+   MODALS (SIGN IN + CART)
+======================= */
+.modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0,0,0,0.6);
     display: none;
     justify-content: center;
@@ -298,52 +186,49 @@ footer {
     z-index: 999;
 }
 
-/* Open modal when targeted */
-#cart-modal:target {
+.modal:target {
     display: flex;
 }
 
-/* Modal box */
-#cart-modal .modal-content {
+.modal-content {
     background: #fff;
-    width: 340px;
+    width: 320px;
     padding: 25px;
     border-radius: 10px;
     position: relative;
     text-align: center;
-    animation: popIn 0.3s ease;
+    animation: fadeIn 0.3s ease;
 }
 
-/* Heading */
-#cart-modal h2 {
+.modal-content h2 {
+    margin-bottom: 15px;
     color: #ff3f6c;
-    margin-bottom: 15px;
 }
 
-/* Cart items area */
-#cart-items {
-    max-height: 200px;
-    overflow-y: auto;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-/* Individual item (if added later) */
-#cart-items p {
-    display: flex;
-    justify-content: space-between;
+.modal-content input {
+    width: 100%;
+    padding: 10px;
     margin: 8px 0;
-    font-size: 0.95rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-/* Total */
-#cart-total {
-    font-weight: bold;
-    margin-top: 10px;
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3f6c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 12px;
 }
 
-/* Close button */
-#cart-modal .close-btn {
+.modal-content button:hover {
+    background-color: #e03661;
+}
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -352,48 +237,26 @@ footer {
     color: #333;
 }
 
-#cart-modal .close-btn:hover {
+.close-btn:hover {
     color: #ff3f6c;
 }
 
-/* Clear Cart button */
-#cart-modal button {
-    width: 100%;
-    padding: 10px;
-    background: #ff3f6c;
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background-color: #333;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 15px;
+    padding: 20px;
+    text-align: center;
 }
 
-#cart-modal button:hover {
-    background: #e03661;
-}
-
-
-
-button[onclick^="addToCart"] {
-    padding: 10px 20px;
-    background: #ff3f6c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button[onclick^="addToCart"]:hover {
-    background: #e03661;
-}
-
-
-
-@keyframes popIn {
+/* =======================
+   ANIMATION
+======================= */
+@keyframes fadeIn {
     from {
-        transform: scale(0.85);
+        transform: scale(0.9);
         opacity: 0;
     }
     to {
@@ -402,4 +265,26 @@ button[onclick^="addToCart"]:hover {
     }
 }
 
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .account-cart {
+        align-items: center;
+    }
+
+    .categories-nav ul {
+        justify-content: center;
+    }
+}
 
