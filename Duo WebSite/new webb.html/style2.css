@@ -287,4 +287,153 @@ footer {
         justify-content: center;
     }
 }
+/* =======================
+   HOT DEALS SECTION
+======================= */
 
+.deals {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.deals h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* Grid layout */
+.deals .product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Deal cards */
+.deals .product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.deals .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+/* Deal images */
+.deals .product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Deal title */
+.deals .product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Deal price */
+.deals .product-card p {
+    font-weight: bold;
+    color: #ff3f6c;
+    margin-bottom: 15px;
+}
+
+/* Add to Cart button */
+.deals .product-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3f6c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.deals .product-card button:hover {
+    background-color: #e03661;
+}
+/* =======================
+   CONTACT US SECTION
+======================= */
+
+.contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* Layout */
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Info box */
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Form */
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Button */
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3f6c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #e03661;
+}
