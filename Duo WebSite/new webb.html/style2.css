@@ -87,6 +87,7 @@ header {
 .products, .deals {
     padding: 50px 20px;
     text-align: center;
+    
 }
 
 .products h2, .deals h2 {
@@ -280,3 +281,4 @@ footer {
     #toggle-signup:checked ~ .login-form {
         display: none;
     }
+
