@@ -1,6 +1,3 @@
-/* =======================
-   RESET
-======================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +8,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
 }
-
-/* =======================
-   HEADER
-======================= */
 header {
     background-color: #ff3f6c;
 }
-
-/* Top Navigation */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -32,8 +23,6 @@ header {
     font-weight: bold;
     color: #000;
 }
-
-/* Search Bar */
 .search-bar {
     flex: 1;
     margin: 0 20px;
@@ -56,10 +45,6 @@ header {
     border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
-
-/* =======================
-   ACCOUNT + CART (FIXED)
-======================= */
 .account-cart {
     display: flex;
     flex-direction: column;
@@ -78,12 +63,10 @@ header {
 .account-cart a:hover {
     text-decoration: underline;
 }
-
-/* =======================
-   CATEGORIES NAV
-======================= */
 .categories-nav {
     background-color: #e03661;
+    display: flex;
+    justify-content: center;
 }
 
 .categories-nav ul {
@@ -99,18 +82,12 @@ header {
     text-decoration: none;
 }
 
-/* =======================
-   BANNER
-======================= */
 .banner img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* =======================
-   PRODUCTS / DEALS
-======================= */
+
 .products,
 .deals {
     padding: 40px 20px;
@@ -172,10 +149,6 @@ header {
 .product-card button:hover {
     background-color: #e03661;
 }
-
-/* =======================
-   MODALS (SIGN IN + CART)
-======================= */
 .modal {
     position: fixed;
     inset: 0;
@@ -240,20 +213,12 @@ header {
 .close-btn:hover {
     color: #ff3f6c;
 }
-
-/* =======================
-   FOOTER
-======================= */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
-
-/* =======================
-   ANIMATION
-======================= */
 @keyframes fadeIn {
     from {
         transform: scale(0.9);
@@ -264,10 +229,6 @@ footer {
         opacity: 1;
     }
 }
-
-/* =======================
-   RESPONSIVE
-======================= */
 @media (max-width: 768px) {
     .top-nav {
         flex-direction: column;
@@ -287,9 +248,6 @@ footer {
         justify-content: center;
     }
 }
-/* =======================
-   HOT DEALS SECTION
-======================= */
 
 .deals {
     padding: 50px 20px;
@@ -303,15 +261,12 @@ footer {
     color: #000;
 }
 
-/* Grid layout */
 .deals .product-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
-
-/* Deal cards */
 .deals .product-card {
     background-color: #fff;
     border-radius: 10px;
@@ -321,33 +276,28 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effect */
 .deals .product-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
-/* Deal images */
 .deals .product-card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-/* Deal title */
 .deals .product-card h3 {
     font-size: 1.1rem;
     margin-bottom: 8px;
 }
 
-/* Deal price */
 .deals .product-card p {
     font-weight: bold;
     color: #ff3f6c;
     margin-bottom: 15px;
 }
 
-/* Add to Cart button */
 .deals .product-card button {
     width: 100%;
     padding: 10px;
@@ -362,9 +312,6 @@ footer {
 .deals .product-card button:hover {
     background-color: #e03661;
 }
-/* =======================
-   CONTACT US SECTION
-======================= */
 
 .contact {
     padding: 50px 20px;
