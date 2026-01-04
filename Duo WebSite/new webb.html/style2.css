@@ -8,24 +8,35 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
 }
-header {
-    background-color: #ff3f6c;
+
+/* ======================= GLOBAL ======================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
+
+/* ======================= HEADER ======================= */
+header {
+    background-color: red;
+}
+
 .top-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    gap: 20px;
+    padding: 15px 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
     color: #000;
 }
+
+/* Search */
 .search-bar {
     flex: 1;
-    margin: 0 20px;
     display: flex;
 }
 
@@ -33,61 +44,70 @@ header {
     flex: 1;
     padding: 8px;
     border: none;
-    border-radius: 4px 0 0 4px;
 }
 
 .search-bar button {
     padding: 8px 15px;
     border: none;
-    background-color: #fff;
-    color: #ff3f6c;
+    background: #fff;
     font-weight: bold;
-    border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
+
+/* Account */
 .account-cart {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
+    gap: 5px;
 }
 
 .account-cart a {
     color: #000;
-    font-size: 14px;
-    font-weight: bold;
     text-decoration: none;
-    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.account-cart a:hover {
-    text-decoration: underline;
-}
+/* ======================= NAV ======================= */
 .categories-nav {
-    background-color: #e03661;
-    display: flex;
-    justify-content: center;
+    background: red;
 }
 
 .categories-nav ul {
     display: flex;
+    justify-content: center;
+    gap: 25px;
     list-style: none;
-    padding: 10px 20px;
-    gap: 20px;
+    padding: 10px;
 }
 
-.categories-nav ul li a {
+.categories-nav a {
     color: #000;
     font-weight: bold;
     text-decoration: none;
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
+/* Menu */
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
 }
 
+.menu a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
 
+/* ======================= BANNER ======================= */
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+/* ======================= PRODUCTS & DEALS ======================= */
 .products,
 .deals {
     padding: 40px 20px;
@@ -96,23 +116,22 @@ header {
 
 .products h2,
 .deals h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .product-grid {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
 .product-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
     width: 220px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -122,41 +141,37 @@ header {
 
 .product-card img {
     width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 12px;
 }
 
 .product-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    margin: 10px 0;
 }
 
 .product-card p {
     font-weight: bold;
-    margin-bottom: 12px;
 }
 
 .product-card button {
-    padding: 10px;
     width: 100%;
-    background-color: #ff3f6c;
+    padding: 10px;
+    background: red;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.product-card button:hover {
-    background-color: #e03661;
-}
+/* ======================= MODAL ======================= */
 .modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999;
 }
 
 .modal:target {
@@ -165,222 +180,56 @@ header {
 
 .modal-content {
     background: #fff;
-    width: 320px;
     padding: 25px;
+    width: 320px;
     border-radius: 10px;
     position: relative;
-    text-align: center;
-    animation: fadeIn 0.3s ease;
-}
-
-.modal-content h2 {
-    margin-bottom: 15px;
-    color: #ff3f6c;
-}
-
-.modal-content input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.modal-content button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff3f6c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 12px;
-}
-
-.modal-content button:hover {
-    background-color: #e03661;
 }
 
 .close-btn {
     position: absolute;
-    top: 10px;
     right: 15px;
-    font-size: 22px;
+    top: 10px;
     text-decoration: none;
-    color: #333;
+    font-size: 20px;
+}
+.login-form{
+    color: red;
+}
+input{
+    border-radius:5px ;
+    width: 250px;
+    padding: 10px;
+}
+.bt2
+{
+    color: black;
+    background: red;
+    width: 90px;
+    padding:5px;
+    border-radius: pointer;
+    border: 2px;
+}
+.bt3
+{
+width: 90px;
+padding: 5px;
+background: red;
+color: black;
+border-radius: pointer;
+border: px;
+}
+/* ======================= FOOTER ======================= */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
-.close-btn:hover {
-    color: #ff3f6c;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-@keyframes fadeIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
+/* ======================= RESPONSIVE ======================= */
 @media (max-width: 768px) {
     .top-nav {
         flex-direction: column;
-        gap: 12px;
     }
-
-    .search-bar {
-        width: 100%;
-        margin: 0;
-    }
-
-    .account-cart {
-        align-items: center;
-    }
-
-    .categories-nav ul {
-        justify-content: center;
-    }
-}
-
-.deals {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f8f8f8;
-}
-
-.deals h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #000;
-}
-
-.deals .product-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.deals .product-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 220px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.deals .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-}
-
-.deals .product-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.deals .product-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-}
-
-.deals .product-card p {
-    font-weight: bold;
-    color: #ff3f6c;
-    margin-bottom: 15px;
-}
-
-.deals .product-card button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff3f6c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.deals .product-card button:hover {
-    background-color: #e03661;
-}
-
-.contact {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #000;
-}
-
-/* Layout */
-.contact-container {
-    max-width: 900px;
-    margin: auto;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-/* Info box */
-.contact-info {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
-    font-size: 1rem;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-}
-
-/* Form */
-.contact-form {
-    flex: 1;
-    min-width: 250px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-}
-
-.contact-form textarea {
-    resize: none;
-    height: 120px;
-}
-
-/* Button */
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff3f6c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #e03661;
 }
